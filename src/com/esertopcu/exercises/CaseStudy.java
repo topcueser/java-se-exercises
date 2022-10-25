@@ -21,4 +21,5 @@ public class CaseStudy {
         System.out.println("Int: " + i);
 
     }
+
 }
