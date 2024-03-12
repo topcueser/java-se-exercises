@@ -14,18 +14,17 @@ public class SecondLargestElement {
 
     public static int returnSecondMax(int[] numbers) {
 
-        int first = numbers[0];
-        int second = Integer.MIN_VALUE;
-
+        int max = numbers[0];
+        int secondMax = Integer.MIN_VALUE;
         for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] > first) {
-                second = first;
-                first = numbers[i];
-            }else if (numbers[i] > second && numbers[i] != first) {
-                second = numbers[i];
+            if (numbers[i] > max) {
+                max = numbers[i];
+                secondMax = max;
+            }else if (numbers[i] > secondMax && numbers[i] != max) {
+                secondMax = numbers[i];
             }
         }
-        return second;
+        return secondMax;
     }
 
     public static int returnSecondMaxUseArraySort(int[] numbers) {

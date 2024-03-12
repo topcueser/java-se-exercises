@@ -23,6 +23,7 @@ public class StringIntroduction {
         String line2String = sc.next();
 
         System.out.println(line1String.length() + line2String.length());
+
         if (line1String.compareTo(line2String) > 0){
             System.out.println("Yes");
         }else{
