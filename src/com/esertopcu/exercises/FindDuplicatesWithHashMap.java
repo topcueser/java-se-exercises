@@ -15,18 +15,9 @@ public class FindDuplicatesWithHashMap {
         Map<Character, Integer> mapStr = new HashMap<>();
 
         char[] charArray = str.toCharArray();
-//        SECOND WAY
-//        char[] charArray1 = new char[str.length()];
-//        for (int i = 0; i < str.length(); i++){
-//            charArray1[i] = str.charAt(i);
-//        }
 
         for (char c : charArray) {
-            if(mapStr.containsKey(c)) {
-                mapStr.put(c, mapStr.get(c) + 1);
-            }else{
-                mapStr.put(c, 1);
-            }
+            mapStr.put(c, mapStr.getOrDefault(c, 0) + 1);
         }
 
         for (Map.Entry<Character, Integer> entry : mapStr.entrySet()) {
